@@ -1,0 +1,299 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(0.5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  /* default 16px divided by the 10px I want as inner standard <- important so set this as a percentage ! */ }
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.7;
+  color: #777; }
+
+.container {
+  height: 100%;
+  width: auto;
+  margin: auto;
+  overflow: hidden; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  font-size: 1.6rem; }
+
+.btn:hover {
+  transform: translateY(-3%);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(1%);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--light {
+  background-color: #fff;
+  color: #333; }
+
+.btn--animate {
+  animation: moveInBottom 1s ease-out 1s backwards; }
+
+.btn-main, .btn-light, .btn-dark {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 0.5rem;
+  transition: all 0.1s;
+  border-bottom: solid 1px #28b485;
+  cursor: pointer; }
+
+.btn-main {
+  background: #55c57a;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 2rem; }
+  .btn-main:hover {
+    transform: translateY(-3%);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  .btn-main:active {
+    transform: translateY(1%);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+
+.btn-light {
+  color: #333;
+  background-color: #7ed56f; }
+
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #28b485; }
+
+.lead {
+  font-size: 1.5rem; }
+
+.section-header {
+  font-size: 3.5rem;
+  display: inline-block;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 1s; }
+  .section-header:hover {
+    transform: skewX(10deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5); }
+
+.header {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(/dist/img/hero.jpg) no-repeat center center/cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; }
+  .header__logo {
+    height: 3.5rem;
+    width: auto; }
+
+.primary-heading {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .primary-heading--main {
+    display: block;
+    font-size: 10rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* 
+		animation-delay: 3s;
+		animation-iteration-count: 2;
+		animation-timing-function: ease-in-out; 
+		*/ }
+  .primary-heading--text {
+    display: block;
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 2.9rem;
+    animation-name: moveInRight;
+    animation-duration: 1s; }
+
+.section-a {
+  height: 100vh;
+  width: 100vw; }
+  .section-a--heading-container {
+    height: 20vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center; }
+  .section-a-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80vh; }
+  .section-a--text-container {
+    font-size: 1.6rem;
+    text-align: left;
+    padding-left: 10rem; }
+  .section-a--headings {
+    font-size: 2.5rem;
+    color: #55c57a;
+    padding: 3rem 0; }
+  .section-a--pictures {
+    position: relative;
+    width: 100%;
+    margin-left: 10rem; }
+  .section-a--picture {
+    width: 45%;
+    position: absolute;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    transition: all;
+    outline-offset: 2rem; }
+    .section-a--picture.picture-1 {
+      bottom: 0;
+      left: 0; }
+    .section-a--picture.picture-2 {
+      top: -10rem;
+      left: 30%; }
+    .section-a--picture.picture-3 {
+      top: 0;
+      left: 5%; }
+    .section-a--picture:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      outline: 1rem solid rgba(85, 197, 122, 0.5);
+      z-index: 99; }
+    .section-a--picture:not(:hover) {
+      transform: scale(0.95); }
+
+.section-b--feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../dist/img/nat-4.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+  /*
+		transform: skewY(-10deg);
+
+		& > * {
+			transform: skewY(10deg);
+		}*/ }
+
+.section-b--feature-box {
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.5);
+  width: 30rem;
+  transition: transform 1s; }
+  .section-b--feature-box i {
+    background: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 2rem 0; }
+  .section-b--feature-box:hover {
+    transform: scale(1.1); }
+
+.section-b--heading {
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-transform: uppercase; }
+
+.section-c {
+  height: 100vh; }
+  .section-c--heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; }
+  .section-c--tour-grid {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    justify-items: center; }
+  .section-c--tour-box {
+    height: 35rem;
+    width: 30rem;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right bottom, rgba(40, 180, 133, 0.8), rgba(126, 213, 111, 0.8));
+    text-align: center; }
+  .section-c--heading-1 {
+    background: url(../../dist/img/nat-5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-transform: uppercase;
+    height: 50%; }
+  .section-c--heading-2 {
+    background: url(../../dist/img/nat-6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-transform: uppercase;
+    height: 50%; }
+  .section-c--heading-3 {
+    background: url(../../dist/img/nat-7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-transform: uppercase;
+    height: 50%; }
+  .section-c--description {
+    font-size: 1.6rem;
+    padding: 0.35rem 0;
+    width: 80%;
+    margin: 0 auto; }
+    .section-c--description:not(:last-child) {
+      border-bottom: 0.5px solid #a0a0a0; }

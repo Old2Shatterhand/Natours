@@ -1,0 +1,217 @@
+.primary-heading {
+	color: $white-color;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+
+	&--main {
+		display: block;
+		font-size: 10rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		/* 
+		animation-delay: 3s;
+		animation-iteration-count: 2;
+		animation-timing-function: ease-in-out; 
+		*/
+	}
+
+	&--text {
+		display: block;
+		font-size: 3rem;
+		font-weight: 200;
+		letter-spacing: 2.9rem;
+		animation-name: moveInRight;
+		animation-duration: 1s;
+	}
+}
+
+.section-a {
+	height: 100vh;
+	width: 100vw;
+
+	// Section A Header
+	&--heading-container {
+		height: 20vh;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&-grid {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 80vh;
+	}
+
+	&--text-container {
+		font-size: 1.6rem;
+		text-align: left;
+		padding-left: 10rem;
+	}
+
+	&--headings {
+		font-size: 2.5rem;
+		color: $primary-color;
+		padding: 3rem 0;
+	}
+
+	&--pictures {
+		position: relative;
+		width: 100%;
+		margin-left: 10rem;
+	}
+
+	&--picture {
+		width: 45%;
+		position: absolute;
+		box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.4);
+		z-index: 10;
+		transition: all;
+		outline-offset: 2rem;
+
+		&.picture-1 {
+			bottom: 0;
+			left: 0;
+		}
+
+		&.picture-2 {
+			top: -10rem;
+			left: 30%;
+		}
+
+		&.picture-3 {
+			top: 0;
+			left: 5%;
+		}
+
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 0 2.5rem 4rem rgba($color: #000000, $alpha: 0.5);
+			outline: 1rem solid rgba($primary-color, $alpha: 0.5);
+			z-index: 99;
+		}
+
+		&:not(:hover) {
+			transform: scale(0.95);
+		}
+	}
+}
+
+.section-b {
+	&--feature-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		align-items: center;
+		justify-items: center;
+		height: 100vh;
+		background: linear-gradient(to right bottom, rgba($primary-color-light, 0.8), rgba($primary-color-dark, 0.8)), url(../../dist/img/nat-4.jpg);
+		background-size: cover;
+		background-position: center;
+		overflow-y: hidden;
+		/*
+		transform: skewY(-10deg);
+
+		& > * {
+			transform: skewY(10deg);
+		}*/
+	}
+
+	&--feature-box {
+		background: rgba($white-color, $alpha: 0.8);
+		font-size: 1.5rem;
+		padding: 2.5rem;
+		text-align: center;
+		border-radius: 3px;
+		box-shadow: 0 1.5rem 2rem rgba($color: #000000, $alpha: 0.5);
+		width: 30rem;
+		transition: transform 1s;
+
+		i {
+			background: linear-gradient(to right, rgba($primary-color-light, $alpha: 0.8), rgba($primary-color-dark, 0.8));
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			padding: 2rem 0;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&--heading {
+		font-size: 2rem;
+		padding: 1rem 0;
+		text-transform: uppercase;
+	}
+}
+
+.section-c {
+	height: 100vh;
+
+	&--heading-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 20vh;
+	}
+
+	&--tour-grid {
+		display: grid;
+		height: 80vh;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+	}
+
+	&--tour-box {
+		height: 35rem;
+		width: 30rem;
+		box-shadow: 0 1.5rem 3rem rgba($color: #000000, $alpha: 0.5);
+		background: linear-gradient(to right bottom, rgba($primary-color-dark, 0.8), rgba($primary-color-light, 0.8));
+		text-align: center;
+	}
+
+	&--heading-1 {
+		background: url(../../dist/img/nat-5.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: $white-color;
+		text-transform: uppercase;
+		height: 50%;
+	}
+
+	&--heading-2 {
+		background: url(../../dist/img/nat-6.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: $white-color;
+		text-transform: uppercase;
+		height: 50%;
+	}
+
+	&--heading-3 {
+		background: url(../../dist/img/nat-7.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: $white-color;
+		text-transform: uppercase;
+		height: 50%;
+	}
+
+	&--description {
+		font-size: 1.6rem;
+		padding: 0.35rem 0;
+		width: 80%;
+		margin: 0 auto;
+
+		&:not(:last-child) {
+			border-bottom: 0.5px solid $grey-dark;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; /* default 16px divided by the 10px I want as inner standard <- important so set this as a percentage ! */
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	line-height: 1.7;
+	color: #777;
+}
