@@ -178,7 +178,7 @@
 	}
 
 	&--heading-1 {
-		background: url(https://source.unsplash.com/KMn4VEeEPR8/1600x900);
+		background: url("https://source.unsplash.com/KMn4VEeEPR8/1600x900");
 		background-repeat: no-repeat;
 		background-size: cover;
 		color: $white-color;
@@ -196,7 +196,7 @@
 	}
 
 	&--heading-3 {
-		background: url(https://source.unsplash.com/1600x900?snow);
+		background-image: none;
 		background-repeat: no-repeat;
 		background-size: cover;
 		color: $white-color;
