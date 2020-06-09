@@ -270,21 +270,21 @@ body {
     background: linear-gradient(to right bottom, rgba(40, 180, 133, 0.8), rgba(126, 213, 111, 0.8));
     text-align: center; }
   .section-c--heading-1 {
-    background: url(../../dist/img/nat-5.jpg);
+    background: url("https://source.unsplash.com/KMn4VEeEPR8/1600x900");
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     text-transform: uppercase;
     height: 50%; }
   .section-c--heading-2 {
-    background: url(../../dist/img/nat-6.jpg);
+    background: url(https://source.unsplash.com/1600x900?forest);
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     text-transform: uppercase;
     height: 50%; }
   .section-c--heading-3 {
-    background: url(../../dist/img/nat-7.jpg);
+    background-image: none;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
